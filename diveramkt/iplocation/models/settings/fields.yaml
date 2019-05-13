@@ -1,0 +1,29 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    api_service:
+        type: dropdown
+        label: API Service
+        default: ipStack
+        span: left
+        options:
+            ipstack: ipStack
+            google: Google
+
+    ipstack_api_key:
+        type: text
+        span: left
+        label: Your ipStack Access key
+        placeholder: "Enter yout Access key here"
+        comment: "Register for a free account here: https://www.ipstack.com/"
+        dependsOn: api_service
+
+    google_api_key:
+        type: text
+        span: left
+        label: Your Google Geolocation API key
+        placeholder: "Enter yout API key here"
+        comment: "Register for a free account here: https://developers.google.com/maps/documentation/geolocation/intro"
+        dependsOn: api_service
